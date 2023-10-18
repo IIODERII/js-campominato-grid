@@ -1,6 +1,5 @@
 (function oderCampoMinato(){
     const startbtn = document.getElementById('start');
-    const returntbtn = document.getElementById('resume');
 
     const playground = document.getElementById('playground');
 
@@ -9,25 +8,14 @@ startbtn.addEventListener('click', function() {
     playground.innerHTML = '' ;
     startbtn.classList.add('d-none');
     playground.classList.remove('d-none') ;
-    returntbtn.classList.remove('d-none') ;
 
-    const numSquare = parseInt(document.getElementById('difficulty').value);
+    const numSquare = 100;
     
-    document.getElementById('select-container').classList.add('d-none');
-
     for(let i = 1 ; i <= numSquare ; i++){
         let square = createSquare(i , numSquare);
 
         playground.append(square) ;
     }
-})
-
-//bottone per tornare alla selezione della difficoltà
-returntbtn.addEventListener('click', function() {
-    startbtn.classList.remove('d-none');
-    returntbtn.classList.add('d-none');
-    playground.classList.add('d-none') ;    
-    document.getElementById('select-container').classList.remove('d-none');
 })
 
 
@@ -48,5 +36,6 @@ function createSquare(squareIndex , rowSquare){
 
     return square;
 }
+
 })();
 
