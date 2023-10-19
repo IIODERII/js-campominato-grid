@@ -32,6 +32,8 @@ function createSquare(squareIndex , rowSquare){
 
     square.addEventListener('click' , function(){
         square.classList.toggle('active');
+        console.log(squareIndex);
+
     })
 
     return square;
